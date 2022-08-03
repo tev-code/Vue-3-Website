@@ -1,119 +1,71 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import Header from './components/Header.vue'
+import Home from './views/Home.vue'
 </script>
 
 <template>
+<div class="app">
   <Header/>
+  <vue-router/>
+  </div>
 </template>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
   :root { 
-  --header-height: 3.5rem;
 
-  /*========== Colors ==========*/
-  --first-color: #121212;
-  --button-color: #1F1A24;
-  --button-color-alt:#332940 ;
-  --title-color: #03DAC5;
-  --text-color: #5e526d;
-  --text-color-light: #BB86FC;
-  --body-color: #000000;
-  --container-color: #1a1a1a;
-  --border-color: #1F1B24;
-  
-
-    /*========== Font and typography ==========*/
-  --body-font: font-family: 'Poppins', sans-serif;
-  --biggest-font-size: 2rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
-
-  /*========== Font weight ==========*/
   --font-medium: 500;
-  --font-bold: 700;
+   }
 
-  /*========== Margenes Bottom ==========*/
-  --mb-0-5: .5rem;
-  --mb-0-75: .75rem;
-  --mb-1: 1rem;
-  --mb-1-5: 1.5rem;
-  --mb-2: 2rem;
-  --mb-2-5: 2.5rem;
-  --mb-3: 3rem;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
-}
-
-@media screen and (min-width: 968px) {
   :root {
-    --biggest-font-size: 2.5rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
+    --first-color: #000000;
+    --secondary-color: #3dac63;
+    --white-color: #bcaad1;
+    --dark-color: #3700B3;
+    --text-color: #ffffff;
+   }
+
+  :root {
+     --body-font: 'Poppins', sans-serif;;
+     --big-font-size: 6.25rem;
+     --h2-font-size: 1.25rem;
+     --normal-size: 938rem;
+     --small-font-size: 875rem; 
+   }
+
+  @media screen and (min-width: 768px){
+    :root {
+        --big-font-size: 10.5rem;
+        --h2-font-size: 2rem;
+        --normal-size: 1rem;
+        --small-font-size: 875rem; 
+    }
 }
 
-/*=============== BASE ===============*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+*,::before, ::after{
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-}
-
-body,
-button,
-input {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  background-color: var(--body-color);
-  color: var(--text-color);
-  /*For animation dark mode*/
-  transition: .4s;
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-  color: var(--title-color);
-  font-weight: var(--font-medium);
+h1,h2,p {
+    margin: 0;
 }
 
-ul {
-  list-style: none;
-}
 
-a {
-  text-decoration: none;
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-}
 
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
 
 </style>
